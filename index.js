@@ -44,6 +44,7 @@ app.post("/users", (req, res) => {
     const newUser = {
       id: generateRandomId(),
       name,
+      createdAt: new Date(),
     };
     users.push(newUser);
     res.json(newUser);
